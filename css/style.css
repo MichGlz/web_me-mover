@@ -446,12 +446,12 @@ textarea {
 }
 
 footer {
-  height: 30vh;
+  height: auto;
   width: 100%;
   background: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2rem;
 }
 footer h3 {
   margin: 0.8rem auto;
