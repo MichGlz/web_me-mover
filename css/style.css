@@ -1,0 +1,523 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap");
+
+:root {
+  --headerHeight: 7vh;
+  --fontMain: "Montserrat", sans-serif;
+  --fontSecondary: "Open Sans", sans-serif;
+  --meMoverBlue: rgb(0, 147, 190);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fontSecondary);
+  box-sizing: border-box;
+}
+
+header {
+  height: var(--headerHeight);
+  width: 100%;
+  background: rgb(255, 255, 255);
+  position: fixed;
+  padding: 0.5vw 2vw;
+  z-index: 100;
+  box-shadow: 0 0 25px 3px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  width: 300px;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+nav ul:last-child {
+  width: 200px;
+  justify-content: space-around;
+}
+
+.burgerMenu {
+  display: none;
+}
+
+.burgerMenu a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-image: url(../assets/burgerMenu.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cross {
+  background-image: url(../assets/burgerMenu.webp);
+}
+
+.navLogo {
+  height: calc(var(--headerHeight) - 1vh);
+  width: auto;
+}
+
+a {
+  color: black;
+  text-decoration-line: none;
+}
+
+.shopBtn {
+  background-color: var(--meMoverBlue);
+  border-style: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  font-size: 105%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.shopBtn:hover {
+  color: var(--meMoverBlue);
+  background: white;
+  box-shadow: 0 0 20px 1px #373737;
+}
+
+.menuSlideContainer {
+  height: calc(100vh - var(--headerHeight));
+  width: 100vw;
+  position: fixed;
+  z-index: 5;
+  top: var(--headerHeight);
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.menuSlide {
+  all: initial;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 100vw;
+  background-color: ivory;
+
+  transition-duration: 0.5s;
+}
+
+.appear {
+  transform: translateX(-100vw);
+}
+
+.pagewraper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.intro {
+  margin-top: var(--headerHeight);
+  height: min(88vw, 1690px);
+  width: min(100%, 1920px);
+  position: relative;
+  color: rgb(255, 255, 255);
+  background-color: var(--meMoverBlue);
+  background-image: url(/assets/Logo\ med\ blå\ baggrund.PNG);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 25vh;
+}
+
+.intro video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: sticky;
+  top: var(--headerHeight);
+  opacity: 1;
+}
+
+.texto {
+  width: min(50vw, 960px);
+  height: min(50vw, 960px);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(37, 37, 37);
+  padding: 3% 0 0 4%;
+}
+
+h1 {
+  font-family: var(--fontMain);
+  font-size: calc(2.5rem + 4vw);
+  line-height: calc(2.5rem + 4vw);
+  font-weight: bolder;
+  margin-top: 1rem;
+}
+
+h2,
+h2 span {
+  font-family: var(--fontMain);
+  font-size: calc(2rem + 2vw);
+  text-align: center;
+}
+
+h3 {
+  margin-top: 1vw;
+  font-family: var(--fontMain);
+  font-size: calc(1rem + 1.2vw);
+}
+
+p {
+  margin-top: calc(1rem + 1vw);
+  font-size: calc(1rem + 1vw);
+  max-width: 29ch;
+}
+.texto h2 {
+  font-weight: 300;
+  text-align: left;
+  letter-spacing: 0.7vw;
+}
+
+h2 span {
+  margin-left: 10%;
+}
+
+.texto a {
+  font-weight: bold;
+  margin-top: 3vw;
+  background-color: var(--meMoverBlue);
+  padding: 1rem 2rem;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.texto a:hover {
+  color: var(--meMoverBlue);
+  background-color: white;
+}
+
+section {
+  height: auto;
+  width: min(100%, 1920px);
+  padding: calc(2rem + 3vw) 0;
+}
+
+.advantages {
+  background: rgb(255, 255, 255);
+  color: var(--meMoverBlue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.iconoWrapper {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.icono {
+  margin-top: calc(1rem + 2vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icono div {
+  min-height: 20rem;
+  padding: 0 10%;
+}
+
+.side div {
+  border: none;
+}
+.icono h2 {
+  color: black;
+  font-size: calc(1.5rem + 1.5vw);
+  max-width: 11ch;
+  text-align: center;
+}
+.icono p {
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+  max-width: 32ch;
+}
+.memover {
+  margin: auto;
+  display: flex;
+}
+.memover .video-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.memover-text {
+  padding: 2rem;
+}
+
+.memover-text h2 span {
+  font-size: 80%;
+}
+.memover-text p {
+  margin-left: calc(2rem + 2vw);
+}
+
+#videoBG {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+}
+
+.testimonials,
+.tryOut {
+  background-color: rgb(37, 37, 37);
+  color: var(--meMoverBlue);
+}
+
+.testimonials h2 {
+  margin-bottom: 2rem;
+}
+
+.carousel-container {
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slideBtn {
+  height: 100%;
+  width: 5%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  font-size: calc(1rem + 2vw);
+  color: white;
+  cursor: pointer;
+  background-color: rgba(214, 214, 214, 0.4);
+  padding: 25% 0 0 1%;
+  opacity: 0.3;
+}
+#nextBtn {
+  right: 0;
+}
+.slideBtn:hover {
+  opacity: 1;
+  color: rgb(37, 37, 37);
+}
+.carousel-slide {
+  display: flex;
+  width: 500%;
+}
+
+.iframe-container {
+  position: relative;
+  width: 20%;
+  height: 0;
+  padding-bottom: 11.25%;
+}
+.iframe-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+form,
+label {
+  display: flex;
+  flex-direction: column;
+}
+form {
+  margin: auto;
+  max-width: 500px;
+}
+.bookingTime {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+label {
+  width: 100%;
+  padding: 1vw;
+  outline: none;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.bookingTime label {
+  width: 45%;
+}
+
+input,
+select,
+.tryOut button {
+  height: 60px;
+  border-radius: 10px;
+  padding-left: 50px;
+  font-size: calc(1rem + 0.2vw);
+  margin-top: 15px;
+  border: none;
+}
+
+input {
+  background-image: url(/assets/frame_12.svg);
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+input[name="email"] {
+  background-image: url(/assets/mail.svg);
+}
+input[name="dateBook"] {
+  background-image: url(/assets/frame_13.svg);
+}
+input[type="time"] {
+  background-image: url(/assets/frame_14.svg);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 5px var(--meMoverBlue);
+}
+
+textarea {
+  border-radius: 10px;
+  height: 180px;
+  padding: 15px;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  border: none;
+}
+
+.tryOut button {
+  padding: 0;
+  background: var(--meMoverBlue);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.tryOut button:hover {
+  background: white;
+  color: var(--meMoverBlue);
+}
+
+footer {
+  height: 30vh;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+footer h3 {
+  margin: 0.8rem auto;
+}
+footer p {
+  margin: 0.5rem auto;
+  font-size: 1.2rem;
+  max-width: 45ch;
+}
+
+@media only screen and (max-width: 1380px) {
+  div.intro {
+    background: white;
+  }
+
+  .texto {
+    width: min(75vw, 960px);
+    height: auto;
+    padding: 3% 0 3% 4%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .menuHidden {
+    display: none;
+  }
+  .burgerMenu {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    padding: 0 3rem 0 1rem;
+  }
+
+  nav ul {
+    width: 0;
+  }
+
+  nav ul:last-child {
+    width: 50px;
+    justify-content: none;
+  }
+
+  div.intro {
+    height: 100vh;
+    background-image: url(/assets/poster.webp);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -60vh;
+  }
+
+  .intro video {
+    display: none;
+  }
+
+  .texto {
+    width: 100vw;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .carousel-container {
+    max-width: 1000px;
+    margin: auto;
+    overflow: auto;
+    overflow-y: scroll;
+    position: relative;
+  }
+  .icono div {
+    min-height: auto;
+    padding: 10%;
+    border-right: none;
+    border-bottom: solid 2px black;
+  }
+
+  /* .side div {
+    border: none;
+  } */
+  .tryOut h2 {
+    max-width: 10ch;
+    margin: auto;
+  }
+  form[name="try-out"] {
+    padding: 1.5rem 0.8rem;
+  }
+  input[type="date"],
+  input[type="time"] {
+    background-image: none;
+    padding: 1rem;
+  }
+}
