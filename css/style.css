@@ -23,21 +23,21 @@ header {
   z-index: 100;
   box-shadow: 0 0 25px 3px;
 }
-nav {
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
 
-nav ul {
+header nav ul {
   width: 300px;
   display: flex;
   list-style: none;
   justify-content: space-between;
 }
 
-nav ul:last-child {
+header nav ul:last-child {
   width: 200px;
   justify-content: space-around;
 }
@@ -50,13 +50,13 @@ nav ul:last-child {
   display: inline-block;
   width: 36px;
   height: 36px;
-  background-image: url(../assets/burgerMenu.webp);
+  background-image: url(../assets/icon-menu-alt.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.cross {
-  background-image: url(../assets/burgerMenu.webp);
+.burgerMenu a.cross {
+  background-image: url(../assets/iconfinder_icon-close-round_211651.svg);
 }
 
 .navLogo {
@@ -98,17 +98,48 @@ a {
 }
 
 .menuSlide {
-  all: initial;
-  width: 100%;
+  margin: 0;
+  width: 100vw;
   height: 100%;
   position: absolute;
   left: 100vw;
-  background-color: ivory;
+  background-color: rgba(37, 37, 37, 0.774);
   transition-duration: 0.5s;
+  pointer-events: auto;
+}
+.menuSlide ul {
+  margin: 0;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuSlide li {
+  margin: 0;
+  padding: 0;
+}
+
+.menuSlide a {
+  display: block;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 15px 1rem;
+  background-color: var(--meMoverBlue);
+  width: 50vw;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 10px;
+  pointer-events: auto;
+}
+.menuSlide a:hover {
+  color: var(--meMoverBlue);
+  background-color: white;
 }
 
 .appear {
-  transform: translateX(-100vw);
+  transform: translateX(-80vw);
 }
 
 .pagewraper {
@@ -456,15 +487,15 @@ footer p {
 }
 
 @media only screen and (max-width: 600px) {
-  nav {
+  header nav {
     padding: 0 3rem 0 1rem;
   }
 
-  nav ul {
+  header nav ul {
     width: 0;
   }
 
-  nav ul:last-child {
+  header nav ul:last-child {
     width: 50px;
     justify-content: none;
   }
@@ -501,9 +532,6 @@ footer p {
     border-bottom: solid 2px black;
   }
 
-  /* .side div {
-    border: none;
-  } */
   .tryOut h2 {
     max-width: 10ch;
     margin: auto;

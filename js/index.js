@@ -3,6 +3,9 @@ const body = document.querySelector("body");
 const img = document.querySelector("img");
 const videoIntro = document.querySelector("video.intro");
 const menuSlide = document.querySelector(".menuSlide");
+const burgerBtn = document.querySelector(".burgerMenu a");
+var menuSlideA = document.querySelectorAll(".menuSlide a");
+menuSlideA.forEach(linked);
 let today;
 let date;
 
@@ -97,7 +100,11 @@ function vidCont() {
     document.querySelector('input[type="time"]').style.paddingLeft = "1rem";
   }
 }
+function linked(a) {
+  a.addEventListener("click", appear);
+}
 
 function appear() {
   menuSlide.classList.toggle("appear");
+  burgerBtn.classList.toggle("cross");
 }
