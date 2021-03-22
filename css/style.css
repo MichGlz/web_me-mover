@@ -91,7 +91,6 @@ a {
   height: calc(100vh - var(--headerHeight));
   width: 100vw;
   position: fixed;
-  z-index: 5;
   top: var(--headerHeight);
   left: 0;
   overflow: hidden;
@@ -105,7 +104,6 @@ a {
   position: absolute;
   left: 100vw;
   background-color: ivory;
-
   transition-duration: 0.5s;
 }
 
@@ -372,20 +370,20 @@ select,
 }
 
 input {
-  background-image: url(/assets/frame_12.svg);
+  background-image: url(../assets/frame_12.svg);
   background-size: 35px;
   background-repeat: no-repeat;
   background-position: 10px center;
 }
 
 input[name="email"] {
-  background-image: url(/assets/mail.svg);
+  background-image: url(../assets/mail.svg);
 }
 input[name="dateBook"] {
-  background-image: url(/assets/frame_13.svg);
+  background-image: url(../assets/frame_13.svg);
 }
 input[type="time"] {
-  background-image: url(/assets/frame_14.svg);
+  background-image: url(../assets/frame_14.svg);
 }
 
 input:focus,
@@ -446,6 +444,9 @@ footer p {
 }
 
 @media only screen and (max-width: 850px) {
+  .menuSlideContainer {
+    z-index: 5;
+  }
   .menuHidden {
     display: none;
   }
@@ -470,7 +471,7 @@ footer p {
 
   div.intro {
     height: 100vh;
-    background-image: url(/assets/poster.webp);
+    background-image: url(../assets/poster.webp);
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: -60vh;
