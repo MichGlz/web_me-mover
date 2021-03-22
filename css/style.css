@@ -127,11 +127,6 @@ div.intro {
   width: min(100%, 1920px);
   position: relative;
   color: rgb(255, 255, 255);
-  background-color: var(--meMoverBlue);
-  background-image: url(/assets/Logo\ med\ blå\ baggrund.PNG);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: 25vh;
 }
 
 .intro video {
