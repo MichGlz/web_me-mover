@@ -539,9 +539,11 @@ footer p {
   form[name="try-out"] {
     padding: 1.5rem 0.8rem;
   }
-  input[type="date"],
-  input[type="time"] {
-    background-image: none;
-    padding: 1rem;
+  .bookingTime {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .bookingTime label {
+    width: 100%;
   }
 }
