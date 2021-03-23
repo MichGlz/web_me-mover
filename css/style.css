@@ -431,6 +431,27 @@ textarea {
   margin-top: 15px;
   border: none;
 }
+.formCheck {
+  flex-direction: row;
+  font-size: 1rem;
+  padding: 0 2.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.formCheck > * {
+  display: inline-block;
+}
+input[type="checkbox"] {
+  background: none;
+  margin: 0;
+  padding: 0;
+  width: 5%;
+}
+
+label.i_agree {
+  width: 90%;
+}
 
 .tryOut button {
   padding: 0;
@@ -439,7 +460,16 @@ textarea {
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
+  width: 100%;
+  opacity: 0.6;
+  pointer-events: none;
 }
+
+#i_agree:checked ~ .checkit {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .tryOut button:hover {
   background: white;
   color: var(--meMoverBlue);
